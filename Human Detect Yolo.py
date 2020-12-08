@@ -43,7 +43,7 @@ for out in outs:
             boxes.append([x, y, w, h])
             
 indices = cv2.dnn.NMSBoxes(boxes, confidences, 0.1, 0.1)
-#check if is people detection
+#check for people
 for i in indices:
     i = i[0]
     box = boxes[i]
