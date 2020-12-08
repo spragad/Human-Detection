@@ -6,15 +6,15 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image = plt.imread('C:/Users/Pragadeesh/Desktop/Human Detect/DSC_0013.JPG')
+image = plt.imread('testimg.JPG')
 
 classes = None
-with open('C:/Users/Pragadeesh/Desktop/Human Detect/yolo/coco.names', 'r') as f:
+with open('yolo/coco.names', 'r') as f:
  classes = [line.strip() for line in f.readlines()]
  
  
  
-net = cv2.dnn.readNet('C:/Users/Pragadeesh/Desktop/Human Detect/yolo/yolov3-spp.weights', 'C:/Users/Pragadeesh/Desktop/Human Detect/yolo/yolov3-spp.cfg')
+net = cv2.dnn.readNet('yolo/yolov3-spp.weights', 'yolo/yolov3-spp.cfg')
 net.setInput(cv2.dnn.blobFromImage(image, 0.00392, (416,416), (0,0,0), True, crop=False))
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
