@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Dec  6 20:29:32 2020
-https://medium.com/@luanaebio/detecting-people-with-yolo-and-opencv-5c1f9bc6a810
 @author: Pragadeesh
 """
 
