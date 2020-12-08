@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-@author: Pragadeesh
-"""
 
 import cv2
 import numpy as np
